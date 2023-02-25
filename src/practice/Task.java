@@ -2,7 +2,7 @@ package practice;
 
 import java.time.LocalDate;
 
-public class Task {
+public class Task implements Comparable<Task>{
 	LocalDate datetime;
 	String content;
 	
@@ -18,6 +18,12 @@ public class Task {
 	public String getContent() {
 		return this.content;
 	}
-		
+	
+
+	
+	@Override
+	public int compareTo(Task other) {
+		return this.datetime.compareTo(other.datetime);
+	}
 	
 }
